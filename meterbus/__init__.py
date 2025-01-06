@@ -38,9 +38,9 @@ from .exceptions import MBusFrameDecodeError, FrameMismatch
 from .serial import *
 from .auxiliary import *
 
-__author__ = "Mikael Ganehag Brorsson"
+__author__ = "Mikael Ganehag Brorsson - edited by sancho679"
 __license__ = "BSD-3-Clause"
-__version__ = "0.8.4"
+__version__ = "0.8.4_sancho679"
 
 
 def load(data):

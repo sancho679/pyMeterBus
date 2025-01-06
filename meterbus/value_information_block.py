@@ -26,6 +26,8 @@ class ValueInformationBlock(TelegramField):
 
     @property
     def without_extension_bit(self):
+        if self.parts[0] == 0xFC:             # [sancho679] adding this hack to avoid decoding problems of
+            return False                      # [sancho679] telegram elements with VIF==0xFC and VIFE
         try:
             return (self.parts[0] & self.WITHOUT_EXTENSION_BIT_MASK) == 0x7C
         except IndexError:
